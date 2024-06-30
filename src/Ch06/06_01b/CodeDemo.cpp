@@ -1,28 +1,30 @@
 // Learning C++ 
 // Exercise 06_01
 // Opening a text file for reading, by Eduardo Corpeño 
+//sam k
 
 #include <iostream>
 #include <string>
 #include <fstream>
+using namespace std;
 
 int main(){
-    std::ifstream inFile;
-    std::string str;
+    ifstream inFile;
+    string str;
     int number;
     char letter;
 
     inFile.open("people.txt");
     if (inFile.fail())
-        std::cout << std::endl << "File not found!" << std::endl;
+        cout << std::endl << "File not found!" << endl;
     else{
         while (!inFile.eof()){
             getline(inFile, str);
-            std::cout << str << std::endl;
+            cout << str << endl;
         }
         inFile.close();
     }
     
-    std::cout << std::endl << std::endl;
+    cout << endl << endl;
     return (0);
 }
